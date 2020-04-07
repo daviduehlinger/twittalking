@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div class="sidebar" data-color="azure" data-background-color="white" data-image="{% static 'img/sidebar-1.jpg' %}">
+        <!--
+          Tip: Change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+        -->
+        <div class="logo"><a href="http://ross.com.ar" class="simple-text logo-normal">
+            Twittalking</a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="nav-item active  ">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">person</i>
+                        <p>Dashboard de usuario</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="search_tweets.html">
+                        <i class="material-icons">comment</i>
+                        <p>B&uacute;squeda de tweets</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">import_export</i>
+                        <p>Exportar datos</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">event</i>
+                        <p>Calendarizar tweet</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">location_ons</i>
+                        <p>Mapas</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">notifications</i>
+                        <p>Notificaciones</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

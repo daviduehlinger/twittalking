@@ -1,4 +1,6 @@
 import tweepy
+import simplejson
+import pprint
 
 
 def search_tweets(words_to_search):
@@ -12,7 +14,11 @@ def search_tweets(words_to_search):
 
     api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-    query = ' '.join(str(word) for word in words_to_search)
-    words = api.search(query, count=5)
-    print(words)
-    return words
+    query = ''.join(str(word) for word in words_to_search)
+    searched_tweets = [status._json for status in tweepy.Cursor(api.search, q=query).items(1)]
+    pprint.pp(searched_tweets)
+    # Every tweet as json
+    # for tweet in searched_tweets:
+    #     print(tweet)
+    #     pprint.pformat(tweet)
+    return searched_tweets

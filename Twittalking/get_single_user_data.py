@@ -16,7 +16,7 @@ def getdata():
     # my_data = api.me()
     # print(simplejson.dumps(my_data._json, indent=4))
 
-    user_data = api.get_user('andrecornaglia')
+    user_data = api.get_user('Python_MS_Fan')
     return user_data
 
     # with open(file='twitterdata.txt', mode='a', encoding='utf-8') as file:

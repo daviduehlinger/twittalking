@@ -19,7 +19,7 @@ html {
 }
 
 @-ms-viewport {
-  width: device-width;
+  width: auto;
 }
 
 article,
@@ -45,6 +45,16 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fafafa;
+}
+
+.welcome-message{
+  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+  line-height: 3;
+  color: #039be5;
+  text-align: center;
+  background-color: transparent;
 }
 
 .form-search-tweet{
@@ -533,8 +543,9 @@ template {
     min-width: 992px !important;
   }
 
+  /* Se ha cambiado el valor original: none*/
   .navbar {
-    display: none;
+    display: inline;
   }
 
   .badge {
@@ -572,7 +583,7 @@ html {
 }
 
 @-ms-viewport {
-  width: device-width;
+  width: auto;
 }
 
 article,
@@ -4521,7 +4532,7 @@ tbody.collapse.show {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center;
+  align-itemsnavbar-collapse: center;
 }
 
 .navbar-toggler {
@@ -13946,19 +13957,19 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .navbar .navbar-wrapper {
-  display: inline-flex;
+  display: inline;
   align-items: center;
 }
 
 .navbar .navbar-brand {
   position: relative;
   color: inherit;
-  height: 50px;
+  height: 60px;
   font-size: 1.125rem;
-  line-height: 30px;
-  padding: 0.625rem 0;
-  font-weight: 300;
-  margin-left: 1rem;
+  line-height: 40px;
+  padding: 1.625rem 0;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .navbar>.container {
@@ -15308,7 +15319,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: relative;
   height: calc(100vh - 75px);
   overflow: auto;
-  width: 260px;
+  width: 660px;
   z-index: 4;
   padding-bottom: 30px;
 }
@@ -15325,7 +15336,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .sidebar .sidebar-wrapper .navbar-form .input-group {
   font-size: 1.7em;
   height: 36px;
-  width: 78%;
+  width: 100%;
   padding-left: 17px;
 }
 
@@ -18903,9 +18914,10 @@ Copyright (c) 2015 Daniel Eden
     overflow-x: hidden;
   }
 
+  /* El valor original de display era none */
   #navbar .navbar-collapse,
   #navigation .navbar-collapse {
-    display: none !important;
+    display: inline !important;
   }
 
   .dropdown-menu.show .dropdown-item.open+.dropdown-menu.show {
@@ -19349,7 +19361,7 @@ Copyright (c) 2015 Daniel Eden
   .form-group.form-search .form-control {
     font-size: 1.7em;
     height: 37px;
-    width: 78%;
+    width: 400px;
   }
 
   .navbar-form .btn {

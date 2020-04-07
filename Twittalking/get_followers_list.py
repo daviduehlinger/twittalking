@@ -11,10 +11,10 @@ def get_followers_list():
 
     api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-    account_name = 'andrecornaglia'
+    account_name = 'Python_MS_Fan'
     followers_list = []
 
-    for individual in tweepy.Cursor(api.followers, screen_name=account_name).items():
+    for individual in tweepy.Cursor(api.followers, screen_name=account_name).items(100):
         followers_list.append(individual._json)
 
     return followers_list

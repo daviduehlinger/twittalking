@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf import settings
-from django.conf.urls.static import static
-from Twittalking.views import dashboard_view, search_tweets_view
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dash/', dashboard_view),
-    path('dash/search_tweets', search_tweets_view),
+    path('', views.index, name='index'),
+    path('single_user_data/', views.single_user_data, name='single_user_data'),
+    path('search_tweets/', views.search_tweets, name='search_tweets'),
+    path('search_tweets_result/', views.search_tweets_result, name='search_tweets_result'),
 ]
